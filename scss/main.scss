@@ -1,6 +1,90 @@
-$primary-color: #444;
+@import "config";
 
+//for the entire body of the page
+* {
+  box-sizing: border-box;
+}
+
+//Body of the page
 body {
+  @include background;
   background: $primary-color;
-  color: #fcf9f9;
+  color: #ffffff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+// css for headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  // nesting the headings inside the general heading tag
+  &.lg-heading {
+    font-size: 6rem; //rem=16px implying 6rem=96px
+    padding: 0.2rem 1rem;
+    color: #b6ecf3;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+p {
+  margin-bottom: 1rem;
+  padding: 0.2rem 1rem;
+  background: rgba(lighten($primary-color, 2), 0.5);
+}
+
+// The links in a tag
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+// keeping the header of the page fixed
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+//changing the color of the lastname with class text-secondary
+.text-secondary {
+  color: $secondary-color;
+}
+
+// main tag
+main {
+  padding: 4rem;
+  height: 100%;
+
+  // nesting the link icons in the main tag for styling
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      //to change the color when a mouse goes up to of the icon
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+
+  //summary page in main tag
+  &#summary {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh; //viewport height
+    }
+  }
 }
