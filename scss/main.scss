@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import "mobile";
 
 //for the entire body of the page
 * {
@@ -15,6 +16,12 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+}
+
+.head {
+  position: absolute;
+  color: $secondary-color;
+  padding: 0.2rem 9rem;
 }
 
 // css for headings
