@@ -3,8 +3,8 @@ $primary-color: #444;
 $secondary-color: #eece1a;
 
 //background image
-$show-summary-image: true;
-$summary-image: url(../img/background.jpg);
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
 $background-opacity: 0.9;
 
 //mixin transition function
@@ -13,9 +13,9 @@ $background-opacity: 0.9;
 }
 
 @mixin background {
-  @if $show-summary-image {
+  @if $show-home-image {
     &#bg-img {
-      background: $summary-image;
+      background: $home-image;
       background-attachment: fixed;
       background-size: cover;
 
@@ -31,6 +31,15 @@ $background-opacity: 0.9;
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+// Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000000;
+  } @else {
+    @return #ffffff;
   }
 }
 
