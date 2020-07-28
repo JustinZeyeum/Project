@@ -135,6 +135,53 @@ main {
   }
 }
 
+// Education page
+.studies {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "course1 course2 course3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .course-1 {
+    grid-area: course1;
+  }
+  .course-2 {
+    grid-area: course2;
+  }
+  .course-3 {
+    grid-area: course3;
+  }
+
+  .course {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+.other-studies {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "other1 other2 other3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .other-1 {
+    grid-area: other1;
+  }
+  .other-2 {
+    grid-area: other2;
+  }
+  .other-3 {
+    grid-area: other3;
+  }
+
+  .other {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;

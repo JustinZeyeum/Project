@@ -51,6 +51,12 @@
 
     grid-template-columns: 1fr;
   }
+
+  .studies,
+  .other-studies {
+    grid-template-areas: "course1" "course2" "course3" "other1" "other2" "other3";
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smartphones
