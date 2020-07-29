@@ -213,7 +213,13 @@ main {
   .studies .course {
     background: #515151;
     padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #eece1a 5px solid;
+    border-top: 2px #ffffff solid; }
+    .studies .course:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      color: #58f6fc;
+      transition: all 0.5s ease-out; }
 
 .other-studies {
   display: grid;
@@ -229,7 +235,35 @@ main {
   .other-studies .other {
     background: #515151;
     padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #eece1a 5px solid;
+    border-top: 2px #ffffff solid; }
+    .other-studies .other:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      color: #58c0fc;
+      transition: all 0.5s ease-out; }
+
+.work-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "work1 work2 work3";
+  grid-template-columns: repeat(3, 1fr); }
+  .work-info .work-1 {
+    grid-area: work1; }
+  .work-info .work-2 {
+    grid-area: work2; }
+  .work-info .work-3 {
+    grid-area: work3; }
+  .work-info .work {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid;
+    border-top: 2px #ffffff solid; }
+    .work-info .work:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      color: #66fc58;
+      transition: all 0.5s ease-out; }
 
 #main-footer {
   text-align: center;
@@ -270,6 +304,9 @@ main {
   .studies,
   .other-studies {
     grid-template-areas: "course1" "course2" "course3" "other1" "other2" "other3";
+    grid-template-columns: 1fr; }
+  .work-info {
+    grid-template-areas: "work1" "work2" "work3";
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {

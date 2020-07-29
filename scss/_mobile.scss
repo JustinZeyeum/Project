@@ -57,6 +57,11 @@
     grid-template-areas: "course1" "course2" "course3" "other1" "other2" "other3";
     grid-template-columns: 1fr;
   }
+
+  .work-info {
+    grid-template-areas: "work1" "work2" "work3";
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smartphones
